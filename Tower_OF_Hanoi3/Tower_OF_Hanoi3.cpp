@@ -12,7 +12,7 @@ int disk_1[10], disk_2[10], disk_3[10];
 int disk_number;
 int ok = 0;
 int i1, i2, i3;
-
+int game_over = 0;
 
 void change_disk(int x, int y)
 {
@@ -121,26 +121,60 @@ int main()
 
 
     int i;
-    cout << "Cititi numarul de disk - uri:";
-    cin >> disk_number;
-    Disk_Initialization(disk_number);
-   // Display_Towers(disk_number);
-    change_disk(1, 2);
-    cout << "\n";
-    Display_Towers(disk_number);
-    change_disk(1, 3);
-    cout << "\n";
-    Display_Towers(disk_number);
-    change_disk(2, 3);
-    cout << "\n";
-    Display_Towers(disk_number);
+    int move_from, move_to;
 
 
-
-  
  
-    int opt;
+    int game_mode, opt;
     
+    cout << "Welcome to play Tower of Hanoi!!!" << "\n";
+
+    
+    while (1)
+    {
+        cout << "1.Rules of the game." << "\n";
+        cout << "2.Play the manual game" << "\n";
+        cout << "3.Let the game play for you" << "\n";
+
+        cout << "Please read an option from below:";
+        cin >> game_mode;
+
+        switch (game_mode)
+        {
+        case 1:
+            cout << "--------------------\n";
+            cout << "The rules\n";
+            cout << "--------------------\n";
+            break;
+        case 2:
+            cout << "\nRead the number of disks you want to play:";
+            cin >> disk_number;
+            Disk_Initialization(disk_number);
+            Display_Towers(disk_number);
+            
+            while (game_over != 1) 
+            {
+                cout << "\nRead from what tower to what tower you want to make the move:";
+                cin >> move_from >> move_to;
+                change_disk(move_from, move_to);
+                Display_Towers(disk_number);
+            }
+         
+            
+                
+
+
+           
+            break;
+        default:
+            cout << "--------------------\n";
+            cout << "Optiune invalida"<<"\n";
+            cout << "--------------------\n";
+            break;
+        }
+
+    }
+
     
 
     for (i = 1; i <= 8; i++)
