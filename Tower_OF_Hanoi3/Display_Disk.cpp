@@ -13,10 +13,15 @@ void Disk_Initialization(int number_of_discs)
         disk_1[i] = counter;
 
     }
+    for (i = 1; i <= number_of_discs; i++)
+    {
+        disk_2[i] = 0;
+        disk_3[i] = 0;
+    }
    
 }
 
-char tower_forms[10][50]{ "        |        ",
+char tower_forms[10][50]{  "        |        ",
                            "        *        ",
                            "       ***       ",
                            "      *****      ",

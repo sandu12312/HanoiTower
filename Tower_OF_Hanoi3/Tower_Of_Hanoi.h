@@ -6,4 +6,5 @@
 using namespace std;
 
 int ReturnDiskNumbers(void);
+extern int tries, ok;
 
