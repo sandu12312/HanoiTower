@@ -13,20 +13,7 @@ void Disk_Initialization(int number_of_discs)
         disk_1[i] = counter;
 
     }
-    counter = number_of_discs - 5;
-    for (i = 1; i <= number_of_discs; i++)
-    {
-        counter--;
-        disk_2[i] = counter;
-
-    }
-    counter = number_of_discs - 5;
-    for (i = 1; i <= number_of_discs; i++)
-    {
-        counter--;
-        disk_3[i] = counter;
-
-    }
+   
 }
 
 char tower_forms[10][50]{ "        |        ",

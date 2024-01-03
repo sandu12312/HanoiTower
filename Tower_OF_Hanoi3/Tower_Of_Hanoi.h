@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Display_Disk.h"
-int disk_1[10], disk_2[10], disk_3[10];
+#include "Manual_Game_Mode.h"
 
 using namespace std;
 
-
+int ReturnDiskNumbers(void);
 

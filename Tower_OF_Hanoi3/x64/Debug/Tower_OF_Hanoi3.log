@@ -1,13 +1,3 @@
 ﻿  Tower_OF_Hanoi3.cpp
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(11,5): error C2086: 'int disk_1[10]': redefinition
-  C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_Of_Hanoi.h(4,5):
-  see declaration of 'disk_1'
-  
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(11,17): error C2086: 'int disk_2[10]': redefinition
-  C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_Of_Hanoi.h(4,17):
-  see declaration of 'disk_2'
-  
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(11,29): error C2086: 'int disk_3[10]': redefinition
-  C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_Of_Hanoi.h(4,29):
-  see declaration of 'disk_3'
-  
+C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(31,20): warning C4101: 'opt': unreferenced local variable
+  Tower_OF_Hanoi3.vcxproj -> C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\x64\Debug\Tower_OF_Hanoi3.exe

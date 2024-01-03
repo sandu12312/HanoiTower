@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Display_Disk.cpp" />
+    <ClCompile Include="Manual_Game_Mode.cpp" />
     <ClCompile Include="Tower_OF_Hanoi3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display_Disk.h" />
+    <ClInclude Include="Manual_Game_Mode.h" />
     <ClInclude Include="Tower_Of_Hanoi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

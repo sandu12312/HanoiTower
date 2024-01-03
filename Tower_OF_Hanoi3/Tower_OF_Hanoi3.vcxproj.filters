@@ -21,12 +21,18 @@
     <ClCompile Include="Display_Disk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Manual_Game_Mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tower_Of_Hanoi.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Display_Disk.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual_Game_Mode.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
