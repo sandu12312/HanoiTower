@@ -1,9 +1,2 @@
 ﻿  Automated_Game.cpp
-  Display_Disk.cpp
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Display_Disk.cpp(42,12): warning C4101: 'j': unreferenced local variable
-  Manual_Game_Mode.cpp
-  Tower_OF_Hanoi3.cpp
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(29,20): warning C4101: 'opt': unreferenced local variable
-C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\Tower_OF_Hanoi3\Tower_OF_Hanoi3.cpp(24,9): warning C4101: 'i': unreferenced local variable
-  Generating Code...
   Tower_OF_Hanoi3.vcxproj -> C:\Users\Catalin\source\repos\Tower_OF_Hanoi3\x64\Debug\Tower_OF_Hanoi3.exe

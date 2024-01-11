@@ -1,11 +1,13 @@
 #include "Display_Disk.h"
 #include <thread>
+
 char rod[] = { 'S', 'A', 'D' };
-int rods[1000][10000]; // Assuming a maximum of 10 disks for each rod
+int rods[1000][10000];
 int top[3] = { -1, -1, -1 }; // To keep track of the top of each rod
 
 int x, y, z;
 
+//This function change the place of the disks if the conditions are true
 void moveDisk(int a, int b)
 {
     if (top[b] == -1 || (top[a] != -1 && rods[a][top[a]] < rods[b][top[b]]))
@@ -17,7 +19,6 @@ void moveDisk(int a, int b)
             disk_3[z] = disk_1[x];
             disk_1[x] = 0;
             x--;
-            cout << x << " " << y << " " << z << "\n";
 
         }
         else if (rod[a] == 'D' && rod[b] == 'S')
@@ -26,7 +27,6 @@ void moveDisk(int a, int b)
             disk_1[x] = disk_3[z];
             disk_3[z] = 0;
             z--;
-            cout << x << " " << y << " " << z << "\n";
         }
         else if (rod[a] == 'S' && rod[b] == 'A')
         {
@@ -34,7 +34,6 @@ void moveDisk(int a, int b)
             disk_2[y] = disk_1[x];
             disk_1[x] = 0;
             x--;
-            cout << x << " " << y << " " << z << "\n";
         }
         else if (rod[a] == 'A' && rod[b] == 'S')
         {
@@ -42,7 +41,6 @@ void moveDisk(int a, int b)
             disk_1[x] = disk_2[y];
             disk_2[y] = 0;
             y--;
-            cout << x << " " << y << " " << z << "\n";
         }
         else if (rod[a] == 'D' && rod[b] == 'A')
         {
@@ -50,7 +48,6 @@ void moveDisk(int a, int b)
             disk_2[y] = disk_3[z];
             disk_3[z] = 0;
             z--;
-            cout << x << " " << y << " " << z << "\n";
         }
         else if (rod[a] == 'A' && rod[b] == 'D')
         {
@@ -58,7 +55,6 @@ void moveDisk(int a, int b)
             disk_3[z] = disk_2[y];
             disk_2[y] = 0;
             y--;
-            cout << x << " " << y << " " << z << "\n";
         }
         rods[b][++top[b]] = rods[a][top[a]--];
     }
@@ -68,6 +64,7 @@ void moveDisk(int a, int b)
     }
 }
 
+//Reinitialization of the vars
 void initialize_vars(int disks)
 {
     for (int i = 0; i < 3; i++)
@@ -78,7 +75,18 @@ void initialize_vars(int disks)
     y = 0;
     z = 0;
 }
-
+/*1. Calculate the total number of moves required i.e. "pow(2, n) - 1" here n is number of disks.
+2. If number of disks(i.e.n) is even then interchange destination
+pole and auxiliary pole.
+3. for i = 1 to total number of moves :
+if i % 3 == 1 :
+    legal movement of top disk between source pole and destination pole
+if i % 3 == 2 :
+       legal movement top disk between source pole and auxiliary pole
+if i % 3 == 0 :
+       legal movement top disk between auxiliary pole
+       and destination pole
+*/
 void automated_game(int n)
 {
 
@@ -98,19 +106,19 @@ void automated_game(int n)
         {
             moveDisk(aux, dest);
             Display_Towers(n);
-            this_thread::sleep_for(chrono::milliseconds(400));
+            this_thread::sleep_for(chrono::milliseconds(400)); //delay of 400 miliseconds
         }
         else if (i % 3 == 1)
         {
             moveDisk(src, dest);
-            Display_Towers(n);
-            this_thread::sleep_for(chrono::milliseconds(400));
+            Display_Towers(n); 
+            this_thread::sleep_for(chrono::milliseconds(400)); //delay of 400 miliseconds
         }
         else
         {
             moveDisk(src, aux);
             Display_Towers(n);
-            this_thread::sleep_for(chrono::milliseconds(400));
+            this_thread::sleep_for(chrono::milliseconds(400)); //delay of 400 miliseconds
         }
     }
 }

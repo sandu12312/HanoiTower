@@ -1,23 +1,17 @@
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <string>
 #include "Tower_Of_Hanoi.h"
 #include "math.h"
 
-
 using namespace std;
-
 
 int disk_1[10], disk_2[10], disk_3[10];
 int disk_number;
 int game_over = 0, steps_number;
 
-
-
 int main()
 {
-
-
     int i;
     int move_from, move_to;
     int game_mode, opt;
@@ -114,11 +108,7 @@ int main()
             cout << "--------------------\n";
             break;
         }
-
     }
-
-
-
     return 0;
 }
 

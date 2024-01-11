@@ -1,7 +1,7 @@
 #include "Display_Disk.h"
 
 
-
+//Disk_Initialization makes the full first tower and empty second and third tower
 void Disk_Initialization(int number_of_discs)
 {
     int i;
@@ -21,7 +21,7 @@ void Disk_Initialization(int number_of_discs)
    
 }
 
-char tower_forms[10][50]{  "        |        ",
+char tower_forms[10][50]{  "        |        ", 
                            "        *        ",
                            "       ***       ",
                            "      *****      ",
@@ -36,7 +36,7 @@ char tower_forms[10][50]{  "        |        ",
 
 
 
-
+//Display the towers
 void Display_Towers(int number_of_discs)
 {
     int i, j;

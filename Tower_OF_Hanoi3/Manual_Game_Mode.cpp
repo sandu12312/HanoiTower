@@ -6,7 +6,7 @@ int check;
 int verify[10], counts, tries=0;
 
 
-
+//the function that validate on every iteration if third tower is complete or n0;
 void verify_array(void)
 {
     int i, n;
@@ -20,6 +20,8 @@ void verify_array(void)
  
 }
 
+//if third array is complete the function Check_GameStatus will return 1 if the game is over
+//and 0 if the game continues
 int Check_GameStatus(void)
 {
     int i, n;
@@ -49,6 +51,8 @@ int Check_GameStatus(void)
         return 0;
 }
 
+
+//the logic behind every valid move
 void change_disk(int x, int y)
 {
 
@@ -60,22 +64,23 @@ void change_disk(int x, int y)
     disk_1[0] = 99;
     disk_2[0] = 99;
     disk_3[0] = 99;
-    if (x == 1 && y == 2)
+    if (x == 1 && y == 2) //if the input is 1 2
     {
-        if (disk_2[i2] > disk_1[i1])
+        if (disk_2[i2] > disk_1[i1]) //verify is a valid move
         {
-            tries++;
-            disk_2[i2 + 1] = disk_1[i1];
-            disk_1[i1] = 0;
-            i2++;
-            i1--;
+            tries++; //the counter for number of tries of moves you are doing
+            disk_2[i2 + 1] = disk_1[i1]; //the top disk from tower 1 is moving on the top of the tower 2
+            disk_1[i1] = 0; //making the top disk from tower 1 = 0 because i moved it to tower 2
+            i2++; //incrementing the index for tower 2
+            i1--; //decrimenting the index for tower 1
         }
         else
         {
-            tries++;
+            tries++; 
             cout << "Invalid move" << "\n\n";
         }
     }
+    //the same logic is for every else if behind
     else if (x == 1 && y == 3)
     {
         if (disk_3[i3] > disk_1[i1])
