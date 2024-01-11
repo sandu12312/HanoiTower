@@ -45,6 +45,9 @@ int main()
             cout << "2. Only the \"top\" disk can be removed." << "\n";
             cout << "3. No large disk can sit over a small disk." << "\n";
             cout << "-------------------------------------------------------------------------------------------------\n";
+            cout << "For Manual game you have to introduce 2 integers that means from which disk to which disk to move.\n";
+            cout << "For Exemple:\nINPUT:1 2 -> you will move from the top first tower a disk to the top of second tower\n";
+            cout << "-------------------------------------------------------------------------------------------------\n";
             break;
         case 2:
            
