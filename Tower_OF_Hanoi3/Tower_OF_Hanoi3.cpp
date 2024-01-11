@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,7 +6,6 @@
 
 
 using namespace std;
-
 
 
 int disk_1[10], disk_2[10], disk_3[10];
@@ -23,9 +20,6 @@ int main()
 
     int i;
     int move_from, move_to;
-    
-
- 
     int game_mode, opt;
     
     cout << "Welcome to play Tower of Hanoi!!!" << "\n";
@@ -43,9 +37,14 @@ int main()
         switch (game_mode)
         {
         case 1:
-            cout << "--------------------\n";
-            cout << "The rules\n";
-            cout << "--------------------\n";
+            cout << "-------------------------------------------------------------------------------------------------\n";
+            cout << "                                           The rules\n";
+            cout << "-------------------------------------------------------------------------------------------------\n";
+            cout << "The mission is to move all the disks to third tower without violating the sequence of arrangement\n";
+            cout << "1. Only one disk can be moved among the towers at any given time." << "\n";
+            cout << "2. Only the \"top\" disk can be removed." << "\n";
+            cout << "3. No large disk can sit over a small disk." << "\n";
+            cout << "-------------------------------------------------------------------------------------------------\n";
             break;
         case 2:
            
