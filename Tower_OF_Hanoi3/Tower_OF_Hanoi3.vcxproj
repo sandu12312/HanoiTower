@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Automated_Game.cpp" />
     <ClCompile Include="Display_Disk.cpp" />
     <ClCompile Include="Manual_Game_Mode.cpp" />
     <ClCompile Include="Tower_OF_Hanoi3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Automated_Game.h" />
     <ClInclude Include="Display_Disk.h" />
     <ClInclude Include="Manual_Game_Mode.h" />
     <ClInclude Include="Tower_Of_Hanoi.h" />
