@@ -118,6 +118,7 @@ int main()
             cout << "--------------------\n";
             cout << "INVALID OPTION" << "\n";
             cout << "--------------------\n";
+            return 0;
             break;
         }
     }
